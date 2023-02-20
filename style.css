@@ -262,3 +262,13 @@ body {
     z-index: 20;
   }
 }
+
+/* Javascript version */
+#accordion li label.active + .content {
+  max-height: 400px;
+  margin-top: 0.5rem;
+}
+
+#accordion li > label.active > img {
+  transform: rotate(180deg);
+}
