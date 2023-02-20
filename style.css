@@ -187,6 +187,10 @@ body {
   background-color: var(--clr-divider);
 }
 
+.faq-accordion-card__image-cube {
+  display: none;
+}
+
 /* hide and show content with CSS on click */
 #accordion input[type="checkbox"] {
   display: none;
@@ -206,10 +210,6 @@ body {
 
 #accordion input[type="checkbox"]:checked + label {
   font-weight: bold;
-}
-
-.faq-accordion-card__image-cube {
-  display: none;
 }
 
 /* Finish hide and show content with CSS on click */
