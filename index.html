@@ -29,36 +29,36 @@
   </head>
   <body>
     <main>
+      <picture class="faq-accordion-card__image-cube">
+        <img
+          src="./images/illustration-box-desktop.svg"
+          alt="background image"
+        />
+      </picture>
       <article class="faq-accordion-card__container">
         <picture class="faq-accordion-card__image">
-          <!-- <source
-            media="(min-width: 1440px)"
-            srcset="./images/illustration-woman-online-mobile.svg"
-          />
           <source
-            media="(min-width: 375px)"
-            srcset="./images/illustration-woman-online-mobile.svg"
-          /> -->
+            media="(min-width: 1100px)"
+            srcset="./images/illustration-woman-online-desktop.svg"
+          />
+
           <img
             src="./images/illustration-woman-online-mobile.svg"
             alt="background image"
           />
         </picture>
         <picture class="faq-accordion-card__image-shadow">
-          <!-- <source
-            media="(min-width: 1440px)"
+          <source
+            media="(min-width: 1100px)"
             srcset="./images/bg-pattern-desktop.svg"
           />
-          <source
-            media="(min-width: 375px)"
-            srcset="./images/bg-pattern-mobile.svg"
-          /> -->
           <img src="./images/bg-pattern-mobile.svg" alt="background image" />
         </picture>
+
         <h1 class="faq-accordion-title">Faq</h1>
         <ul id="accordion">
           <li>
-            <input type="checkbox" name="accordion" id="first" checked />
+            <input type="checkbox" name="accordion" id="first" />
             <label for="first"
               >How many team members can I invite?
               <img src="./images/icon-arrow-down.svg" alt=""
@@ -72,7 +72,7 @@
           </li>
           <div class="divider"></div>
           <li>
-            <input type="checkbox" name="accordion" id="second" />
+            <input type="checkbox" name="accordion" id="second" checked />
             <label for="second"
               >What is the maximum file upload size?
               <img src="./images/icon-arrow-down.svg" alt=""

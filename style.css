@@ -108,6 +108,8 @@ body {
   place-content: center;
   padding: 1.5rem;
   max-height: 100svh;
+  width: 375px;
+  margin: 0 auto;
 }
 
 .faq-accordion-card__image {
@@ -173,7 +175,6 @@ body {
 #accordion li label img {
   width: 10px;
   height: 7px;
-  transition: all 0.3s ease-out;
 }
 
 #accordion li input[type="checkbox"]:checked + label > img {
@@ -194,7 +195,6 @@ body {
 #accordion .content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease-out;
   color: var(--clr-secondary-200);
   max-width: 90%;
 }
@@ -208,4 +208,55 @@ body {
   font-weight: bold;
 }
 
+.faq-accordion-card__image-cube {
+  display: none;
+}
+
 /* Finish hide and show content with CSS on click */
+
+@media (min-width: 1100px) {
+  body {
+    width: 1000px;
+    position: relative;
+  }
+  .faq-accordion-card__container {
+    max-width: 920px;
+    padding: 61px 85px 61px 475px;
+    margin-top: 0;
+    justify-items: start;
+    overflow: hidden;
+  }
+
+  .faq-accordion-title {
+    margin-top: 0;
+  }
+
+  #accordion {
+    margin-left: 0;
+    z-index: 100;
+  }
+
+  #accordion .content {
+    max-width: 1000%;
+  }
+
+  /* Images  */
+  .faq-accordion-card__image {
+    top: 15%;
+    left: -9%;
+    z-index: 10;
+  }
+
+  .faq-accordion-card__image-shadow {
+    top: -55%;
+    left: -58%;
+  }
+
+  .faq-accordion-card__image-cube {
+    display: block;
+    position: absolute;
+    top: 46.5%;
+    left: -8.9%;
+    z-index: 20;
+  }
+}
