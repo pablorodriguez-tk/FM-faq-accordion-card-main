@@ -156,6 +156,14 @@ body {
   list-style: none;
 }
 
+#accordion li::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: var(--clr-divider);
+  margin-top: 1rem;
+}
+
 #accordion li label {
   font-size: 0.8125rem;
   display: flex;
@@ -179,12 +187,6 @@ body {
 
 #accordion li input[type="checkbox"]:checked + label > img {
   transform: rotate(180deg);
-}
-
-#accordion .divider {
-  width: 100%;
-  height: 1px;
-  background-color: var(--clr-divider);
 }
 
 .faq-accordion-card__image-cube {
