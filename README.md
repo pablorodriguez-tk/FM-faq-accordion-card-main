@@ -43,12 +43,35 @@ Users should be able to:
 
 ### What I learned
 
-#### Accordion using CSS and HTML only, using input type checkbox (can be change to radio button if you want only one to be open at a time)
+#### Accordion using JS
+
+```js
+const listItem = document.getElementsByClassName("list-item");
+
+for (const item of listItem) {
+  const onLabelClicked = () => {
+    // if the clicked element has the active class, remove it
+    if (item.classList.contains("active")) {
+      item.classList.remove("active");
+      return;
+    }
+
+    //remove active class from all elements
+    if (document.querySelector(".active")) {
+      document.querySelector(".active").classList.remove("active");
+    }
+
+    // add active class to the clicked element
+    item.classList.add("active");
+  };
+
+  item.addEventListener("click", onLabelClicked);
+}
+```
 
 ```html
 <li>
-  <input type="checkbox" name="accordion" id="first" />
-  <label for="first"
+  <label for="first" class="list-item"
     >How many team members can I invite?
     <img src="./images/icon-arrow-down.svg" alt=""
   /></label>
@@ -61,8 +84,7 @@ Users should be able to:
 </li>
 <div class="divider"></div>
 <li>
-  <input type="checkbox" name="accordion" id="second" checked />
-  <label for="second"
+  <label for="second" class="list-item"
     >What is the maximum file upload size?
     <img src="./images/icon-arrow-down.svg" alt=""
   /></label>
@@ -76,23 +98,12 @@ Users should be able to:
 ```
 
 ```css
-#accordion input[type="checkbox"] {
-  display: none;
-}
-
-#accordion .content {
-  max-height: 0;
-  overflow: hidden;
-  color: var(--clr-secondary-200);
-  max-width: 90%;
-}
-
-#accordion input[type="checkbox"]:checked ~ .content {
+#accordion li label.active + .content {
   max-height: 400px;
   margin-top: 0.5rem;
 }
 
-#accordion input[type="checkbox"]:checked + label {
-  font-weight: bold;
+#accordion li > label.active > img {
+  transform: rotate(180deg);
 }
 ```
